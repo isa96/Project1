@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+    frontend:
+        image: 'rocksus/aksara-jawa-frontend:latest'
+        build: ./frontend
+        ports:
+            - ${PORT}:80
+    backend:
+        image: 'rocksus/aksara-jawa-backend:latest'
+        build: ./Backend
+        ports:
+            - 14022:14022
